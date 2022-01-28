@@ -1,34 +1,4 @@
 
-const fiverr_counter = document.getElementById('fiverr_counter');
-const counting       = document.getElementById ('counting')
-
-fiverr_counter.addEventListener ('submit', function (e) {
-    e.preventDefault();
-
-        let date = this.querySelector('input[type = "date"]').value;
-        let time = this.querySelector('input[type = "time"]').value;
-
-
-    setInterval(() => {
-        let start_time = new Date();
-        let end_time   = new Date(date + ' ' + time);
-
-        let time_diff  = Math.floor(Math.abs(end_time.getTime() - start_time.getTime()));
-
-        let total_sec   = Math.floor(time_diff / 1000);
-        let total_min   = Math.floor(total_sec / 60);
-        let total_hours = Math.floor (total_min / 60);
-        let total_day   = Math.floor (total_hours / 24) 
-
-        let hours   = total_hours - (total_day * 24);
-        let minutes = total_min - (total_day * 24 * 60) - (hours * 60);
-        let second  = total_sec - (total_day * 24 * 60 * 60) - (hours * 60 * 60 ) - (minutes * 60)
-
-        counting.innerHTML = `${total_day} : ${hours < 10 ? "0"+hours : hours} : ${minutes < 10 ? "0"+minutes : minutes} : ${second < 10 ? "0"+second : second}`
-
-    },1000)
-})
-
 // ============== Age Calculation ================
 
 const age_cal = document.getElementById('age_cal')
@@ -132,6 +102,7 @@ function leapChecker(year){
 
 
 // ================= Add Products ================== //
+
 const add_product_btn = document.getElementById('add_product_btn');
 const submit = document.getElementById('products_form');
 const product_box = document.getElementById('products_add_box');
