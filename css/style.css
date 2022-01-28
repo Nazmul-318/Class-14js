@@ -2,16 +2,24 @@
     font-family: 'digital';
     src: url(../fonts/digital.ttf);
 }
+
+
+
 #counting  {
-	font-family: "digital", Georgia, 'Times New Roman', Times, serif;
+	font-family: "digital", arial;
 	font-size: 60px;
-	font-weight: 600;	
+	font-weight: 600;
+	color: #16a085;
 }
-.btn-primary {   
-    border: none;   
+.btn-primary {
+    background: #16a085;
+    border: none;
+    /* text-transform: uppercase; */
 }
+
 .btn-primary:hover {
-	color: #fff;	
+	color: #fff;
+	background-color: #16a084f7;
 	border: none;
 }
 .btn-primary:focus{
@@ -26,9 +34,11 @@
 	border-color: transparent !important;
 }
 .btn-check:active + .btn-primary, .btn-check:checked + .btn-primary, .btn-primary.active, .btn-primary:active, .show > .btn-primary.dropdown-toggle {
-	color: #fff;	
+	color: #fff;
+	background-color: #0a58ca;
 	border-color: #0a53be;
 }
+
 #age_result span{
 	width: 100px;
 	height: 100px;
@@ -50,11 +60,17 @@
 	margin: 0;
 	line-height: 0;
 }
+
 /* Member */
-.github i, .facebook i {
+.git i, .fb i {
 	font-size: 30px;
 	margin: 10px 5px;
 }
+
+
+
+/* ==============
+================== */
 #output span{
 	width: 100px;
 	height: 100px;
@@ -65,4 +81,14 @@
 	font-weight: 600;
 	margin: 0 5px;
 	border-radius: 5px;
+}
+.list-group-item {
+	border: 0 !important;
+	padding: 0;
+}
+.social-media {
+	text-align: center;
+}
+.card-img {
+	border-bottom: 1px solid #ddd;
 }
